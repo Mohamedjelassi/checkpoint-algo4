@@ -1,0 +1,9 @@
+ALGORITHM algorithm_name
+VAR
+    sum INTEGER;
+BEGIN
+sum:=0;
+    FOR i FROM 0 TO tab.length-1 STEP 1  DO
+        sum:=sum+tab[i];
+    END_FOR
+END
