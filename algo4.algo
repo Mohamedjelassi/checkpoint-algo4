@@ -1,9 +1,16 @@
-ALGORITHM algorithm_name
+PROCEDURE sort(var tab : array_of_integer)
 VAR
-    sum INTEGER;
+    i : INTEGER;
+    j : INTEGER;
+    temp : INTEGER;
 BEGIN
-sum:=0;
-    FOR i FROM 0 TO tab.length-1 STEP 1  DO
-        sum:=sum+tab[i];
+    FOR i FROM 1 TO tab.length-1 STEP 1  DO
+         temp:=tab [i];
+         j := i-1;
+         WHILE (j>=0 AND tab[j]>temp) DO
+          tab[j+1] := tab[j];
+          j := j-1;
+         END_WHILE
+         tab[j+1] = temp;
     END_FOR
 END
